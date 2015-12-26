@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <!-- bootstrap cdn for font awesome -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" integrity="sha256-3dkvEK0WLHRJ7/Csr0BZjAWxERc5WH7bdeUya2aXxdU= sha512-+L4yy6FRcDGbXJ9mPG8MT/3UCDzwR9gPeyFNMCtInsol++5m3bk2bXWKdZjvybmohrAsn3Ua5x8gfLnbE1YkOg==" crossorigin="anonymous">
+    <link rel="stylesheet" href="/stylesheets/style.css" integrity="sha256-OlSbjYBfrJGGd2zbT3qCsAZsPGxRwKOSGjqqfjF8aiY= sha512-1aDUINxj8c9UXJ76eIMAkG2/ofIjG8FBW4drgHUglwY/rGn+YWUtm8iSkrpAOtwZ9b9LEva02KPrTDx3M5ib3w==" crossorigin="anonymous">
+    <meta charset="UTF-8">
+    <title>Jquery Rate Picker Demo</title>
+</head>
+<body>
+<h1> Sample 1 [default]: <span id="rating-1" data-stars="3"></span></h1>
+<p> <pre>No callback, data will posted as &lt;input type="hidden" name="rating-1" /&gt;</pre> </p>
+
+<h1> Sample 2 [callback]: <span id="rating-2" data-stars="4"></span></h1>
+<p> <pre>Call back function given. In this case alert was given. data will still be posted as &lt;input type="hidden" name="rating-2" /&gt;</pre> </p>
+
+<h1> Sample 3 [custom]: <span id="rating-3" data-stars="6"></span></h1>
+<p> <pre>Custom number of stars, cursor and custom colors are possible</pre> </p>
+
+<h1> Sample 4 [custom]: <span id="rating-4" data-stars="6"></span></h1>
+<p> <pre>Any font awesome character can be used as an indicator</pre> </p>
+<h1> Sample 5 [custom]: <span id="rating-5" data-stars="2"></span></h1>
+<p> <pre>Yet anoter example</pre> </p>
+<p><i class="fa fa-smile-o"></i> Helton MALAMBANE</p>
+<!-- Jquery -->
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<!-- Jquery Rate Picker-->
+<script type="text/javascript" src="js/jquery-rate-picker.js"></script>
+
+<script>
+    $.ratePicker("#rating-1");
+
+    $.ratePicker("#rating-2", {
+        rate : function (stars){
+            alert('Sample 3\'s Rate is ' + stars);
+        }
+    });
+
+    $.ratePicker("#rating-3", {
+        max :10,
+        rgbOn:"#e74c3c",
+        rgbOff:"#ecf0f1",
+        rgbSelection:"#e74c3c",
+        cursor:"crosshair",
+        rate : function (stars){
+            alert('Sample 3\'s Rate is ' + stars);
+        }
+    });
+
+    $.ratePicker("#rating-4", {
+        max :10,
+        rgbOn:"#2ecc71",
+        rgbOff:"#bdc3c7",
+        rgbSelection:"#2ecc71",
+        indicator:"fa-circle"
+    });
+    $.ratePicker("#rating-5", {
+        max :5,
+        rgbOn:"#2ecc71",
+        rgbOff:"#bdc3c7",
+        rgbSelection:"#2ecc71",
+        indicator:"fa-thumbs-up"
+    });
+
+
+
+
+
+
+
+</script>
+
+</body>
+</html>
