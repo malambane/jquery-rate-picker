@@ -34,6 +34,7 @@ if (typeof jQuery === 'undefined'){
 				}
 				if (!(options.rate === 'undefined')){
 					options.rate(index > options.max ? options.max : index);
+                    stars = index;
 				}
 			});
 			$(item).mouseover(function (){
@@ -41,6 +42,12 @@ if (typeof jQuery === 'undefined'){
 					$($(target + " > i")[i]).css("color", i <= index ? options.rgbSelection : options.rgbOff);
 				}
 			});
+            $(item).mouseleave(function(){
+                $("[name=" + target.replace("#", "") + "]").val(index);
+                for (var i = 1; i <= options.max; i++){
+                    $($(target + "> i")[i]).css("color", i <= stars ? options.rgbOn : options.rgbOff);
+                }
+            });
 		});
 	};
 })(jQuery);
