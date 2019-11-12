@@ -73,7 +73,3 @@ $.ratePicker("#rating-1");
 </p>
 
 
-Click for <a href="http://helton.malambane.com/js/jquery-rate-picker" target="_blank">live demo</a>
-<p>Helton MALAMBANE</p>
-
-
