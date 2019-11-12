@@ -1,8 +1,8 @@
 # jquery-rate-picker
-An easy to use rate picker built on top of jquery and font awesome.  <a href="http://helton.malambane.com/js/jquery-rate-picker" target="_blank">Check the online demo</a>
+An easy to use rate picker built on top of jquery and font awesome.  
 
 <h2> Example 1 [default]:</h2>
-<img src="http://helton.malambane.com/js/jquery-rate-picker/img/sample3.png" />
+
 <p> <pre>No callback, data will posted as &lt;input type="hidden" name="rating-1" /&gt;</pre> </p>
 
 <b>html:</b>
@@ -19,7 +19,7 @@ $.ratePicker("#rating-1");
 </p>
 
 <h2> Example 2 [custom]: </h2>
-<img src="http://helton.malambane.com/js/jquery-rate-picker/img/sample2.png" />
+
 <p> <pre>Callback function, colors, maximum starts and pointer given, <br/>
  data will still be posted as &lt;input type="hidden" name="rating-2" /&gt;</pre>
  </p>
@@ -48,7 +48,7 @@ $.ratePicker("#rating-1");
 </p>
 
 <h2> Example 3 [custom]: </h2>
-<img src="http://helton.malambane.com/js/jquery-rate-picker/img/sample4.png" />
+
 <p> <pre>Custom font awesome indicator</pre>
  </p>
 
